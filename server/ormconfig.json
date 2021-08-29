@@ -1,0 +1,25 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "password",
+  "database": "desafio_mesha",
+  "synchronize": true,
+  "loggin": false,
+  "migrationsTableName": "migrations",
+  "migrations": [
+    "src/database/migrations/*{.ts, .js}"
+  ],
+  "entities": [
+    "src/entities/*{.ts, .js}"
+  ],
+  "subscribers": [
+    "src/subscribers/*{.ts, .js}"
+  ],
+  "cli": {
+    "migrationsDir": "src/database/migrations",
+    "entitiesDir": "src/entities",
+    "subscribersDir": "src/subscribers" 
+  }
+}
