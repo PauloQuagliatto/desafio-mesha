@@ -1,11 +1,9 @@
-import { Entity, PrimaryGeneratedColumn, Column, UpdateDateColumn, OneToOne } from "typeorm"
+import { Entity, PrimaryColumn, Column, UpdateDateColumn } from "typeorm"
 import { v4 as uuid } from "uuid"
-
-import { Knowledge } from "./Knowledge"
 
 @Entity("colaborators")
 class Colaborator {
-  @PrimaryGeneratedColumn()
+  @PrimaryColumn()
   readonly id: string
 
   @Column({ type: "varchar", length: 100 })
@@ -20,8 +18,32 @@ class Colaborator {
   @Column()
   phone: string
 
-  @OneToOne(type => Knowledge)
-  knowledge: Knowledge
+  @Column()
+  is_validated: boolean
+
+  @Column()
+  git: boolean
+
+  @Column()
+  react: boolean
+
+  @Column()
+  php: boolean
+
+  @Column()
+  nodejs: boolean
+
+  @Column()
+  devops: boolean
+
+  @Column()
+  databases: boolean
+
+  @Column()
+  typescript: boolean
+
+  @Column()
+  number_of_skills: number
 
   @UpdateDateColumn()
   updated_at: Date

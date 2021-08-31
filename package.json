@@ -1,0 +1,23 @@
+{
+  "name": "desafio-mesha",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && node install.js",
+    "dev": "concurrently"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PauloQuagliatto/desafio-mesha.git"
+  },
+  "author": "Paulo Miranda Quagliatto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PauloQuagliatto/desafio-mesha/issues"
+  },
+  "homepage": "https://github.com/PauloQuagliatto/desafio-mesha#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}

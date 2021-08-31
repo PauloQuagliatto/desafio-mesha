@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+
+import { ColaboratorsContextProvider } from './contexts/ColaboratorsContext'
+
+import { RegistrosPage } from "./pages/RegistrosPage"
+import { FirstPage } from "./pages/FirstPage"
+import { RegisterPage } from "./pages/RegisterPage"
+import { ValidatePage } from './pages/ValidatePage'
+
+import { Global } from './styles/Global'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ColaboratorsContextProvider>
+        <Global />
+        <Switch>
+          <Route path="/" component={FirstPage} exact={true} />
+          <Route path="/registros" component={RegistrosPage} />
+          <Route path="/:nomedocolaborador/registrar" component={RegisterPage} />
+          <Route path="/:nomedocolaborador/validar" component={ValidatePage} />
+        </Switch>
+      </ColaboratorsContextProvider>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export { App }

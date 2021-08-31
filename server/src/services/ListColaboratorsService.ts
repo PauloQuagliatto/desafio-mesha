@@ -1,7 +1,7 @@
 import { getCustomRepository } from 'typeorm'
 import { ColaboratorsRepositories } from '../repositories/ColaboratorsRepositories'
 
-class ListUsersService {
+class ListColaboratorsService {
   async execute() {
     const colaboratorsRepositories = getCustomRepository(ColaboratorsRepositories)
 
@@ -11,4 +11,4 @@ class ListUsersService {
   }
 }
 
-export { ListUsersService }
+export { ListColaboratorsService }
